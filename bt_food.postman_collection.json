@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "cd07dde3-8b39-4425-8246-768683278b0d",
+		"name": "bt_food",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28523368"
+	},
+	"item": [
+		{
+			"name": "getListLike-Res",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/res/like-res/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"like-res",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListLike-User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjgsImtleSI6MTcwOTU2MDkxNjk0MCwiaWF0IjoxNzA5NTYwOTMwLCJleHAiOjE3MDk1NjA5NDB9.RV7PbP8H9164ojTA0AxQC67kV-NxetqiLNr4H7kUom8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/res/like-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"like-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xu-ly-like",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resId\": \"1\",\r\n    \"userId\": \"6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/xu-ly-like",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"xu-ly-like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListRate-Res",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/res/list-rated/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"list-rated",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getListRate-User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/list-rated-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"list-rated-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createRated",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resId\": \"1\",\r\n    \"userId\": \"1\",\r\n    \"amount\":\"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/res/create-rated",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"res",
+						"create-rated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orderFood",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
